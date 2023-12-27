@@ -21,7 +21,7 @@ M.base = {
 	FloatBorder        = { fg=colors.FloatBorder,   bg = "NONE" },
 	Folded             = { fg=colors.FoldedFG,      bg=colors.FoldedBG },
 	VertSplit          = { fg=colors.VertSplit,            bg=colors.bg },
-	LineNr             = { fg=colors.LineNr,        bg=colors.bg},         -- number column
+	LineNr             = { fg=colors.LineNr,        bg = config.transparent_background and "NONE" or colors.bg, },         -- number column
 	CursorLineNr       = { fg=colors.CursorLineNrFG,bg=colors.CursorLineNrBG, style = "bold" },
 	Cursor             = { fg=colors.Curosr,        bg=colors.bg },
 	CursorColumn       = { fg = "NONE",             bg = "NONE" },
@@ -254,18 +254,19 @@ M.plugins = {
 
 	-- Gitsigns: github.com/lewis6991/gitsigns.nvim
 	-----------------------------------------
-	GitSignsAdd    = { fg=colors.GitAddFG,    bg=colors.GitAddBG },
-	GitSignsChange = { fg=colors.GitChangeFG, bg=colors.GitChangeBG },
-	GitSignsDelete = { fg=colors.GitDeleteFG, bg=colors.GitDeleteBG },
+	GitSignsAdd    = { fg=colors.GitAddFG,    bg = config.transparent_background and "NONE" or colors.bg, },
+	GitSignsChange = { fg=colors.GitChangeFG, bg = config.transparent_background and "NONE" or colors.bg, },
+	GitSignsDelete = { fg=colors.GitDeleteFG, bg = config.transparent_background and "NONE" or colors.bg, },
 	-----------------------------------------
 
 
 	-- gitgutter: github.com/airblade/vim-gitgutter
 	-----------------------------------------
-	GitGutterAdd    = { fg=colors.GitGutterAddFG,    bg=colors.GitGutterAddBG },
-	GitGutterChange = { fg=colors.GitGutterChangeFG, bg=colors.GitGutterChangeBG },
-	GitGutterDelete = { fg=colors.GitGutterDeleteFG, bg=colors.GitGutterDeleteBG },
+	GitGutterAdd    = { fg=colors.GitGutterAddFG,    bg = config.transparent_background and "NONE" or colors.bg, },
+	GitGutterChange = { fg=colors.GitGutterChangeFG, bg = config.transparent_background and "NONE" or colors.bg, },
+	GitGutterDelete = { fg=colors.GitGutterDeleteFG, bg = config.transparent_background and "NONE" or colors.bg, },
 	-----------------------------------------
+
 
 
 	-- Indent-blankline: github.com/lukas-reineke/indent-blankline.nvim
