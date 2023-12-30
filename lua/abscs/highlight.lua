@@ -28,7 +28,7 @@ M.base = {
 	FoldColumn         = { fg=colors.FoldColumn },
 	CursorLine         = { bg=colors.CursorLine },
 	-- CursorIM           =  { fg=colors.cursor_fg, bg=colors.cursor_bg },
-	SignColumn         = { fg=colors.bg,  bg=colors.bg },
+	SignColumn         = { fg=colors.bg,	bg = config.transparent_background and "NONE" or colors.bg, },
 	ColorColumn        = { bg=colors.bg },
 	Conceal            = { fg=colors.fg },-- { bg = config.transparent_background and "NONE" or colors.bg },
 	QuickFixLine       = { bg=colors.QuickFixLine },
